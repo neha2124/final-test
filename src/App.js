@@ -1,5 +1,5 @@
 import  React,{useState,useEffect,createContext} from "react";
-import { BrowserRouter as Router , Routes ,Route } from "react-router-dom";
+import {   Routes ,Route } from "react-router-dom";
 import Detail from './component/detail'
 import Card from './component/card'
 // import { useState } from "react";
@@ -18,16 +18,16 @@ function App() {
   
   return (
     <AppState.Provider value={val} >
-   <Router>
+   
      
     <Routes>
       
-      <Route path='/' element={<Card />}></Route>
+      <Route path='/final-test' element={<Card />}></Route>
       <Route path='/detail/:id' element={<Detail />}></Route>
       
     </Routes>
 
-   </Router>
+   
    </AppState.Provider>
   )
 }
