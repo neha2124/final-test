@@ -17,17 +17,18 @@ function App() {
   },[])
   
   return (
-   
+    <AppState.Provider value={val} >
    <Router>
-     <AppState.Provider value={val} >
+     
     <Routes>
       
       <Route path='/' element={<Card />}></Route>
       <Route path='/detail/:id' element={<Detail />}></Route>
       
     </Routes>
-    </AppState.Provider>
+
    </Router>
+   </AppState.Provider>
   )
 }
 
